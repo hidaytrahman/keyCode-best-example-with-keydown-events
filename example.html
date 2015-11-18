@@ -1,0 +1,113 @@
+
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Key Code</title>
+<script src="jquery-2.1.4.js"></script>
+<script>
+$(document).ready(function(){
+// Md Hidaytullah Rahmani
+//  Do something after press key
+// Date : 11-17-2015 
+
+$("#enterYourKey").on('keydown',function(e){
+			
+			var enteredVal = $("#enterYourKey").val();
+			var enteredLength = $("#enterYourKey").val().length;
+			
+			
+			$("h2 span").html("You Entered <b>"+enteredVal+"</b> Code is <b>"+ e.keyCode +"</b>"); 
+			
+			if(enteredLength>1)
+			{
+					enteredLength.remove();
+			}
+			
+			if(e.keyCode==83)//for S
+			{
+					$(".front-wrapper").addClass("colorful"); //addClass
+			}
+			
+			else{
+					$(".front-wrapper").removeClass("colorful"); //addClass
+				}
+			
+})
+	
+});
+</script>
+
+<style>
+/*browser Layout*/
+*{margin:0px;padding:0px;}
+body{line-height:16px;font-family:arial;background:#fff;}
+a{text-decoration:none;transition:all 0.7s ease;}
+
+.hr-wrapper{margin:0px auto;}
+h1{line-height:30px; text-align:center}
+h2{text-align: center;    padding: 15px; margin:5px 0; line-height:25px}
+h2 span b{    color: #E2E2E2;    font-size: 45px;    border: 2px solid #ccc;    padding: 11px;
+    border-radius: 44px;    min-width: 85px;    display: inline-block;    /* min-height: 48px; */
+    vertical-align: middle;    text-align: center;    background: #2B2A2A;}
+	
+h3{line-height: 20px;    text-align: center;    color: #1B7EB5;    margin: 10px 0;    padding: 14px 0;    background: #E2E2E2;}
+p{text-align:justify; font-size:14px; line-height:18px;}
+.front-wrapper{background: #353535;    border: 3px solid #fff;    box-shadow: 0px 0px 6px gray;    padding: 2%;	box-sizing:border-box;}
+.colorful{background:orange}
+.front-wrapper h1{color:yellow}
+.content{max-width:1200px; margin:0px auto}
+#enterYourKey{padding: 16px;border-radius: 23px; margin: 0px auto; text-align: center;font-size: 34px;font-weight: bold;display: block;}
+	
+
+/*Author Style*/
+.author-wrapper{font-family: arial;max-width: 440px;padding: 15px;background: #fff;box-shadow: 0px 0px 6px #CABEBE;margin: 11px auto;    text-align: center;    border: 4px #BDBDBD solid;margin-top:5%;}
+.author-wrapper span{font-size: 15px;padding: 6px;display: block;border-bottom: 1px #ccc solid;margin-bottom: 8px;}
+.programmer-skills{}
+.programmer-skills span{background:#FF8100;padding: 3px 12px;display: inline-block;font-size: 12px;margin: 1px 0;border-radius: 0px 16px;}
+.programmer-skills span:nth-child(2){background: #0F3FC0;}
+.programmer-skills span:nth-child(3){background: red;}
+.programmer-skills span:nth-child(4){background: yellow;}
+.author-wrapper a{color: gray;    font-size: 14px;    margin: 6px;    display: block;}
+
+@media screen and (max-width:640px){
+		.programmer-skills{border:1px solid #ccc;}
+		.programmer-skills b{display:block; margin:10px auto 5px auto; text-align:center; max-width:150px; border-top:1px #ccc solid;
+		position:relative;top:-13px; background:#fff;}
+}
+
+</style>
+
+</head>
+<body>
+
+<div class="hr-wrapper">
+
+<div class="front-wrapper"> 	
+    <h1>Example of keyCode</h1>
+    <h3>Check Your key Code and type "S" or "s" and get box color orange</h3>
+    <h2>Current <span></span></h2>
+    <input type="text" id="enterYourKey" placeholder="Enter Key" />
+</div>
+<!-- Front wrapper end here -->
+ 
+<div class="content">
+ <h3>Sed ut perspiciatis unde omnis iste natus error sit voluptatem </h3>
+ <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac,</p>
+ 
+ 
+
+<div class="author-wrapper">
+	<span><b>Code Author :</b>  Md Hidaytullah Rahmani</span>
+    <div class="programmer-skills">
+    	<b>Languages: </b><span>HTML5</span><span>CSS3</span><span>JQuery</span><span>RWD</span>
+    </div>
+    <a href="http://www.webtechpie.com">Webtecpie</a>
+    
+</div>
+
+
+</div>
+
+</body>
+</html>
